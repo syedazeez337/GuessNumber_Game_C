@@ -25,10 +25,10 @@ int main(void)
         if(guessNum > MAXNUM || guessNum < 1)
         {
             printf("Invalid Input...\n");
-            break;
+            continue;
         }
 
-        for(int i = 1; i < ATTEMPTS; ++i)
+        for(int i = 1; i <= ATTEMPTS; ++i)
         {
             if(guessNum == randNum)
             {
@@ -55,7 +55,7 @@ int main(void)
                 break;
             }
             printf("Guess again: ");
-            printf("%d", &guessNum);
+            scanf("%d", &guessNum);
         }
         if(guessNum != randNum)
         {
